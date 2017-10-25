@@ -345,7 +345,7 @@ i<!--
             <div>
                 <template is="dom-if" if="{{config.enabledComponents.browser}}">
                     <div class="content" id="browser">
-                        <variant-browser mode="browser" title="Variant Browser" host="{{opencga.host}}"
+                        <variant-browser mode="browser" host="{{opencga.host}}"
                                          project="{{project}}" study="{{study}}" studies="{{project.studies}}"
                                          config="{{config.tools.browser}}" biotypes="{{config.biotypes}}"
                                          active="{{config.tools.browser.active}}"
@@ -362,7 +362,7 @@ i<!--
 
                 <template is="dom-if" if="{{config.enabledComponents.prioritization}}">
                     <div class="content" id="prioritization">
-                        <variant-prioritization mode="prioritization" title="Prioritization" host="{{opencga.host}}"
+                        <variant-prioritization mode="prioritization" host="{{opencga.host}}"
                                                 project="{{project}}" study="{{study}}" samples="{{samples}}"
                                                 config="{{config.tools.prioritization}}" biotypes="{{config.biotypes}}"
                                                 population-frequencies="{{populationFrequencies}}"
@@ -378,7 +378,7 @@ i<!--
 
                 <template is="dom-if" if="{{config.enabledComponents.interpretation}}">
                     <div class="content" id="interpretation">
-                        <variant-clinical-interpretation data="{{interpretationJson}}" title="Interpretation" project="{{project}}"
+                        <variant-clinical-interpretation data="{{interpretationJson}}" titleText="Interpretation" project="{{project}}"
                                                          study="{{study}}"  opencga-client="{{opencgaClient}}"
                                                          cellbase-client="{{cellbaseClient}}"
                                                          consequence-types="{{consequenceTypes}}"
@@ -389,7 +389,7 @@ i<!--
 
                 <template is="dom-if" if="{{config.enabledComponents.clinical}}">
                     <div class="content" id="clinical">
-                        <variant-clinical title="Clinical Analysis" host="{{opencga.host}}" project="{{project}}"
+                        <variant-clinical host="{{opencga.host}}" project="{{project}}"
                                           study="{{study}}" samples="{{samples}}"
                                           config="{{config.tools.clinical}}" config-opencga="{{config.opencga}}" biotypes="{{config.biotypes}}"
                                           population-frequencies="{{populationFrequencies}}"
@@ -1152,6 +1152,6 @@ i<!--
         }
 
         customElements.define(IvaApp.is, IvaApp);
-
     </script>
+    
 </dom-module>
