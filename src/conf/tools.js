@@ -149,7 +149,19 @@ const filter = {
                     tooltip: "Filter out variants falling outside the genomic features (gene, transcript, SNP, etc.) defined"
                 }
             ]
-        }
+        },
+  {
+             title: "VCF Metrics",
+             collapsed: true,
+             subsections: [
+                 {
+                     id: "vcfFilterDropdown",
+                     title: "VCF FILTER",
+                     filterValues: ["PASS", "QualByDepth", "FisherStrand", "RMSMappingQuality", "MappingqualityRankSumTest", "ReadPosRankSumTest", "StrandOddsRatio"],
+                     tooltip: "Fill tooltip for VCF FILTER"
+                 },
+             ]
+         }
     ]
 };
 
