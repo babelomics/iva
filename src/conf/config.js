@@ -15,14 +15,14 @@
  */
 
 const cellbase = {
-    hosts: ["http://bioinfo.hpc.cam.ac.uk/cellbase/"],
-    // hosts: ["http://cellbase.clinbioinfosspa.es/cb"],
+    // hosts: ["http://bioinfo.hpc.cam.ac.uk/cellbase/"],
+    hosts: ["http://cellbase.clinbioinfosspa.es/cb"],
     version: "v4",
 };
 
 const opencga = {
-    host: "http://localhost:8080/opencga-test",
-    // host: "10.233.7.18:8080/opencga-1.3.2",
+    // host: "http://localhost:8080/opencga-test",
+    host: "10.233.7.23:8080/opencga-1.3.8",
     // host: "http://bioinfodev.hpc.cam.ac.uk/hgva-1.3.6",
     // host: "http://10.248.117.63:8080/opencga-1.3.5",
     version: "v1",
@@ -78,11 +78,11 @@ const opencga = {
 
 const application = {
     title: "MMP-SAS",
-    version: "v1.1.9",
+    version: "v1.1.10",
     logo: "img/cbra_logo_initial.png",
     notifyEventMessage: "notifymessage",
     mmpExtensionWS: {
-        root: "http://10.233.7.18:1688/api/",
+        root: "http://10.233.7.23:1688/api/",
         panel: "panel/",
         gene: "gene/"
     },
