@@ -22,6 +22,7 @@ const cellbase = {
 
 const opencga = {
     host: "http://localhost:8080/opencga-1.3",
+    // host: "http://iva-courses.clinbioinfosspa.es:8080/opencga-1.3.6",
     // host: "10.233.7.23:8080/opencga-1.3.8",
     // host: "http://bioinfodev.hpc.cam.ac.uk/hgva-1.3.6",
     // host: "http://10.248.117.63:8080/opencga-1.3.5",
@@ -105,7 +106,7 @@ const application = {
         {
             id: "interpretation",
             title: "Variant Interpretation",
-            visibility: "public",
+            visibility: "none",
         },
         {
             id: "individual",
@@ -140,7 +141,7 @@ const application = {
         {
             id: "genomeBrowser",
             title: "Genome Browser (Beta)",
-            visibility: "public"
+            visibility: "none"
         },
         {
             id: "analysis",
