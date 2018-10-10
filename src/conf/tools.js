@@ -241,7 +241,7 @@ const tools = {
             includeMissing: true,
             queryParams: {
                 useSearchIndex: "auto",
-                approximateCount: true,
+                approximateCount: false,
                 approximateCountSamplingSize: 5000,
                 timeout: 30000
             }
@@ -279,7 +279,7 @@ const tools = {
             includeMissing: true,
             queryParams: {
                 useSearchIndex: "yes",
-                approximateCount: true,
+                approximateCount: false,
                 approximateCountSamplingSize: 1000,
                 timeout: 30000
             }
@@ -376,8 +376,8 @@ const tools = {
         interpretation: {
             visible: true,
             algorithms: [
-                {id: "interactive", title: "Interactive (based on TEAM paper)"},
-                {id: "automatic", title: "Automatic", checked: true},
+                { id: "interactive", title: "Interactive (based on TEAM paper)", checked: true },
+                // {id: "automatic", title: "Automatic", checked: true},
             ],
 
             // Interpretation standard config
@@ -393,7 +393,7 @@ const tools = {
                 includeMissing: true,
                 queryParams: {
                     useSearchIndex: "yes",
-                    approximateCount: true,
+                    approximateCount: false,
                     skipCount: false,
                     approximateCountSamplingSize: 5000,
                     timeout: 30000,
@@ -407,7 +407,7 @@ const tools = {
 
         queryParams: {
             useSearchIndex: "yes",
-            approximateCount: true,
+            approximateCount: false,
             approximateCountSamplingSize: 5000,
             timeout: 30000
         },
