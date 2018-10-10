@@ -21,9 +21,9 @@ const cellbase = {
 };
 
 const opencga = {
-    host: "http://localhost:8080/opencga-1.3",
+    // host: "http://localhost:8080/opencga-1.3",
     // host: "http://iva-courses.clinbioinfosspa.es:8080/opencga-1.3.6",
-    // host: "10.233.7.23:8080/opencga-1.3.8",
+    host: "http://10.233.7.23:8080/opencga-1.3.8",
     // host: "http://bioinfodev.hpc.cam.ac.uk/hgva-1.3.6",
     // host: "http://10.248.117.63:8080/opencga-1.3.5",
     version: "v1",
@@ -83,8 +83,8 @@ const application = {
     logo: "img/cbra_logo_initial.png",
     notifyEventMessage: "notifymessage",
     mmpExtensionWS: {
-        // root: "http://10.233.7.23:1688/api/",
-        root: "http://localhost:3000/api/",
+        root: "http://10.233.7.23:1688/api/",
+        // root: "http://localhost:3000/api/",
         panel: "panel/",
         gene: "gene/"
     },
