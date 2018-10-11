@@ -31,7 +31,7 @@ const filterMenu = {
                 {
                     id: "sample",
                     title: "Samples",
-                    showApproximateCount: true,
+                    showApproximateCount: false,
                     showSelectSamples: true,
                     inheritanceModes: [
                         {key: "none", text: "Select..."},
