@@ -83,11 +83,13 @@ const filterMenu = {
                     title: "Feature IDs (gene, SNPs, ...)",
                     tooltip: "Filter out variants falling outside the genomic features (gene, transcript, SNP, etc.) defined"
                 },
+                /*
                 {
                     id: "geneDiseasePanels",
                     title: "Gene Disease Panels(PanelApp)",
                     tooltip: "Filter out variants falling outside the genomic intervals (typically genes) defined by the panel(s) chosen(PanelApp)"
                 },
+                */
                 {
                     id: "externalPanels",
                     title: "MMP Panels",
