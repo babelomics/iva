@@ -218,7 +218,22 @@ const i18n = {
                 bravo: "Bravo",
                 mendez: "Méndez",
                 borrego: "Borrego",
+                interpretationText_moi_dominant: 'La enfermedad presente en esta familia es una enfermedad hereditaria autosómica dominante. Esta mutación tiene implicaciones para los familiares %%patientArticle%% paciente, que podrían considerar un diagnóstico presintomático de la enfermedad. El riesgo de trasmitir esta mutación a la descendencia, y de que por tanto tengan un riesgo incrementado a desarrollar la enfermedad, es del 50% para cada hijo.',
+                interpretationText_moi_recessive: 'La enfermedad presente en esta familia presenta un modo de herencia autosómico recesivo. Este resultado tiene implicaciones para los familiares adultos %%patientArticle%% paciente, que podrían considerar un diagnóstico de portadores de la enfermedad.',
+                interpretationText_moi_xlinked: 'La enfermedad presente en esta familia presenta un modo de herencia ligado al cromosoma X. Este resultado tiene implicaciones para los familiares adultos %%patientArticle%% paciente, que podrían considerar un diagnóstico de portadoras o afectos de la enfermedad.',
             }
         }
+    }
+}
+
+const i18nTranslate = (key, lang, args) => {
+    let msg = !!i18n && !!key && !!lang && !!i18n[lang] && !!i18n[lang].clinical && !!i18n[lang].clinical.report && i18n[lang].clinical.report[key];
+    if (!!msg) {
+        for (const argName in args) {
+            msg = msg.replace(`%%${argName}%%`, args[argName]);
+        }
+        return msg;
+    } else {
+        return key;
     }
 }
