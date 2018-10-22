@@ -151,6 +151,7 @@ const i18n = {
                 methodologyText1: "Extracción automática de ADN (MagnaPure)",
                 methodologyText2: "Secuenciación masiva utilizando la tecnología de captura SeqCap EZ Choice Library (NimbleGen) y el secuenciador NextSeq (Illumina).",
                 methodologyText3: "Análisis bioinformático:",
+                methodologyText3_0: "Amplificación por PCR y secuenciación directa ",
                 methodologyText3_1: "Alineamiento de las secuencias frente al genoma de referencia (hg19) con el programa BWA. Eliminación de duplicados mediante la herramienta PICARD.",
                 methodologyText3_2: "Identificación de mutaciones puntuales y pequeñas deleciones o inserciones realizando la llamada y filtrado de variantes con el programa GATK y la anotación de las mismas con la herramienta Cellbase.",
                 methodologyText3_3: "Análisis de CNVs mediante el paquete de programas BEDtools y posterior normalización.",
@@ -208,6 +209,12 @@ const i18n = {
                 bravo: "Bravo",
                 mendez: "Méndez",
                 borrego: "Borrego",
+                articleM:"El ",
+                articleMtxt:"el ",
+                articleMtxtdel:"del ",
+                articleF:"La ",
+                articleFtxt:"la ",
+                articleFtxtdela:"de la ",
             }
         }
     }
