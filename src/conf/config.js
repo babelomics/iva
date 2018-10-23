@@ -15,8 +15,8 @@
  */
 
 const cellbase = {
-    // hosts: ["http://bioinfo.hpc.cam.ac.uk/cellbase/"],
-    hosts: ["http://cellbase.clinbioinfosspa.es/cb"],
+    hosts: ["http://bioinfo.hpc.cam.ac.uk/cellbase/"],
+    // hosts: ["http://cellbase.clinbioinfosspa.es/cb"],
     version: "v4",
 };
 
@@ -83,8 +83,8 @@ const application = {
     logo: "img/cbra_logo_initial.png",
     notifyEventMessage: "notifymessage",
     mmpExtensionWS: {
-        root: "http://10.233.7.23:1688/api/",
-        // root: "http://localhost:3000/api/",
+        // root: "http://10.233.7.23:1688/api/",
+        root: "http://localhost:3000/api/",
         panel: "panel/",
         gene: "gene/"
     },
