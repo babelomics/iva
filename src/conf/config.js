@@ -14,20 +14,33 @@
  * limitations under the License.
  */
 
+// to ease environment switching...
+const environmentName = 'development';
+// cellbase: http://bioinfo.hpc.cam.ac.uk/cellbase/
+// opencga: http://bioinfodev.hpc.cam.ac.uk/hgva-1.3.6
+const serverUrls = environmentName === 'development' ? {
+        cellbase: 'http://cellbase.clinbioinfosspa.es/cb',
+        opencga: 'http://localhost:8080/opencga-1.3',
+        mmpExtensions: 'http://localhost:3000/api/',
+    } :  environmentName === 'testing' ? {
+        cellbase: 'http://cellbase.clinbioinfosspa.es/cb',
+        opencga: 'http://10.233.7.23:8080/opencga-1.3.8',
+        mmpExtensions: 'http://10.233.7.23:1688/api/',
+    } : {
+        cellbase: 'http://cellbase.clinbioinfosspa.es/cb',
+        opencga: 'http://10.233.7.18:8080/opencga-1.3.8',
+        mmpExtensions: 'http://10.233.7.18:1688/api/',
+    };
+
+
 const cellbase = {
-    // hosts: ["http://bioinfo.hpc.cam.ac.uk/cellbase/"],
-    hosts: ["http://cellbase.clinbioinfosspa.es/cb"],
+    hosts: [ serverUrls.cellbase ],
     version: "v4",
 };
 
 const opencga = {
-    // host: "http://localhost:8080/opencga-1.3",
-    // host: "http://iva-courses.clinbioinfosspa.es:8080/opencga-1.3.6",
-    host: "http://10.233.7.23:8080/opencga-1.3.8",
-    // host: "http://bioinfodev.hpc.cam.ac.uk/hgva-1.3.6",
-    // host: "http://10.248.117.63:8080/opencga-1.3.5",
+    host: serverUrls.opencga,
     version: "v1",
-
     // This forces the following projects to be used instead of the user's project
     // projects: [
     //     {
@@ -83,8 +96,7 @@ const application = {
     logo: "img/cbra_logo_initial.png",
     notifyEventMessage: "notifymessage",
     mmpExtensionWS: {
-        root: "http://10.233.7.23:1688/api/",
-        // root: "http://localhost:3000/api/",
+        root: serverUrls.mmpExtensions,
         panel: "panel/",
         gene: "gene/"
     },
