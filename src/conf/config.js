@@ -15,22 +15,41 @@
  */
 
 // to ease environment switching...
-const environmentName = 'development';
 // cellbase: http://bioinfo.hpc.cam.ac.uk/cellbase/
 // opencga: http://bioinfodev.hpc.cam.ac.uk/hgva-1.3.6
-const serverUrls = environmentName === 'development' ? {
-        cellbase: 'http://cellbase.clinbioinfosspa.es/cb',
-        opencga: 'http://localhost:8080/opencga-1.3',
-        mmpExtensions: 'http://localhost:3000/api/',
-    } :  environmentName === 'testing' ? {
-        cellbase: 'http://cellbase.clinbioinfosspa.es/cb',
-        opencga: 'http://10.233.7.23:8080/opencga-1.3.8',
-        mmpExtensions: 'http://10.233.7.23:1688/api/',
-    } : {
-        cellbase: 'http://cellbase.clinbioinfosspa.es/cb',
-        opencga: 'http://10.233.7.18:8080/opencga-1.3.8',
-        mmpExtensions: 'http://10.233.7.18:1688/api/',
+
+const getEnvironmentUrls = environmentName => {
+    switch (environmentName) {
+        case 'development':
+            return {
+                cellbase: 'http://cellbase.clinbioinfosspa.es/cb',
+                opencga: 'http://localhost:8080/opencga-1.3',
+                mmpExtensions: 'http://localhost:3000/api/',
+            };
+        case 'development-1.4':
+            return {
+                cellbase: 'http://cellbase.clinbioinfosspa.es/cb',
+                opencga: 'http://localhost:8080/opencga-test',
+                mmpExtensions: 'http://localhost:3000/api/',
+            };
+        case 'testing':
+            return {
+                cellbase: 'http://cellbase.clinbioinfosspa.es/cb',
+                opencga: 'http://10.233.7.23:8080/opencga-1.3.8',
+                mmpExtensions: 'http://10.233.7.23:1688/api/',
+            };
+        default:
+            return {
+                cellbase: 'http://cellbase.clinbioinfosspa.es/cb',
+                opencga: 'http://10.233.7.18:8080/opencga-1.3.8',
+                mmpExtensions: 'http://10.233.7.18:1688/api/',
+            };
     };
+};
+
+// const serverUrls = getEnvironmentUrls('development-1.4');
+const serverUrls = getEnvironmentUrls('development');
+
 
 
 const cellbase = {
