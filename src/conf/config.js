@@ -60,6 +60,7 @@ const cellbase = {
 const opencga = {
     host: serverUrls.opencga,
     version: "v1",
+    serverVersion: "1.3",
     // This forces the following projects to be used instead of the user's project
     // projects: [
     //     {
@@ -180,18 +181,13 @@ const application = {
             visibility: "none",
             submenu: [
                 {
-                    title: "Clinical Interpretation",
-                    category: true,
+                    id: "projects",
+                    title: "Projects",
                     visibility: "public",
                 },
                 {
-                    id: "tiering",
-                    title: "GEL Tiering (Family)",
-                    visibility: "public",
-                },
-                {
-                    id: "cancer",
-                    title: "Cancer",
+                    id: "sample",
+                    title: "Sample View",
                     visibility: "public",
                 },
                 {
@@ -199,10 +195,44 @@ const application = {
                     visibility: "public",
                 },
                 {
-                    id: "burden",
-                    title: "Burden Test",
+                    title: "Browsers",
+                    category: true,
                     visibility: "public",
                 },
+                {
+                    id: "samples",
+                    title: "Sample Browser",
+                    visibility: "public",
+                },
+                {
+                    id: "individuals",
+                    title: "Individual Browser",
+                    visibility: "public",
+                },
+                {
+                    id: "families",
+                    title: "Family Browser",
+                    visibility: "public",
+                },
+                {
+                    id: "cohorts",
+                    title: "Cohort Browser",
+                    visibility: "public",
+                },
+                {
+                    separator: true,
+                    visibility: "public",
+                },
+                {
+                    title: "Panels",
+                    category: true,
+                    visibility: "public",
+                },
+                {
+                    id: "panel",
+                    title: "Panels",
+                    visibility: "public",
+                }
             ],
         },
         {
@@ -211,18 +241,13 @@ const application = {
             visibility: "none",
             submenu: [
                 {
-                    title: "Catalog",
+                    title: "Variant",
                     category: true,
                     visibility: "public",
                 },
                 {
-                    id: "samples",
-                    title: "Samples",
-                    visibility: "public",
-                },
-                {
-                    id: "panel",
-                    title: "Panels",
+                    id: "ibs",
+                    title: "IBS",
                     visibility: "public",
                 },
                 {
@@ -232,11 +257,6 @@ const application = {
                 {
                     title: "Other",
                     category: true,
-                    visibility: "public",
-                },
-                {
-                    id: "ibs",
-                    title: "IBS",
                     visibility: "public",
                 },
                 {
@@ -288,6 +308,17 @@ const application = {
 
 const sampleBrowser = {
     title: "Sample Browser",
+    showTitle: true,
+    filter: {
+
+    },
+    grid: {
+        showSelect: true,
+    }
+};
+
+const cohortBrowser = {
+    title: "Cohort Browser",
     showTitle: true,
     filter: {
 

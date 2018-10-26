@@ -19,7 +19,7 @@
     "test-e2e": "./node_modules/.bin/nightwatch"
   },
   "dependencies": {
-    "@polymer/polymer": "2.3.1",
+    "@polymer/polymer": "2.6.1",
     "@webcomponents/shadycss": "^1.5.2",
     "@webcomponents/webcomponentsjs": "^1.2.7",
     "animate.css": "^3.7.0",
@@ -39,6 +39,7 @@
     "font-awesome": "*",
     "highcharts": "~4.2.7",
     "jquery": "~2.2.4",
+    "jquery.json-viewer": "^1.1.0",
     "jwt-decode": "^2.2.0",
     "moment": "^2.22.2",
     "qtip2": "~3.0.3",
