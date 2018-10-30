@@ -22,7 +22,8 @@ const getEnvironmentUrls = environmentName => {
     switch (environmentName) {
         case 'development':
             return {
-                cellbase: 'http://cellbase.clinbioinfosspa.es/cb',
+                // cellbase: 'http://cellbase.clinbioinfosspa.es/cb',
+                cellbase: 'http://bioinfo.hpc.cam.ac.uk/cellbase/',
                 opencga: 'http://localhost:8080/opencga-1.3',
                 mmpExtensions: 'http://localhost:3000/api/',
             };
