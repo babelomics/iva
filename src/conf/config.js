@@ -174,7 +174,7 @@ const application = {
         {
             id: "genomeBrowser",
             title: "Genome Browser (Beta)",
-            visibility: "none"
+            visibility: "private"
         },
         {
             id: "analysis",
