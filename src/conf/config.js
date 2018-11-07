@@ -171,11 +171,11 @@ const application = {
         //     title: "Beacon",
         //     visibility: "public",
         // },
-        {
-            id: "genomeBrowser",
-            title: "Genome Browser (Beta)",
-            visibility: "private"
-        },
+        // {
+        //     id: "genomeBrowser",
+        //     title: "Genome Browser (Beta)",
+        //     visibility: "none"
+        // },
         {
             id: "analysis",
             title: "Analysis",
