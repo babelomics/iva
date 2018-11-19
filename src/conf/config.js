@@ -113,7 +113,7 @@ const opencga = {
 
 const application = {
     title: "MMP-SAS",
-    version: "v1.1.12",
+    version: "v1.1.13",
     logo: "img/cbra_logo_initial.png",
     notifyEventMessage: "notifymessage",
     mmpExtensionWS: {
