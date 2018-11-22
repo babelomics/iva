@@ -1054,6 +1054,7 @@
                 if (!!e && !!e.detail && !!e.detail.project && !!e.detail.project.name) {
                     this.project = e.detail.project;
                     this.study = this.project.studies.find(study => (study.name === e.detail.study.name || study.alias === e.detail.study.alias));
+                    this.opencgaSession = Object.assign({}, this.opencgaSession, {project: this.project, study: this.study});
                 }
 
 //                TODO: Opencga study will be shown later. For now variant browser is shown when the study changes
