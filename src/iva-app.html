@@ -1045,24 +1045,20 @@
                         this.project = this.projects[i];
                     }
                 }
-                this.tool = "#project";
+                this.tool = "#clinical";
                 this.renderHashFragments();
                 this.renderBreadcrumb();
             }
 
             updateStudy(e) {
-                if (UtilsNew.isNotUndefined(e.detail.project) && UtilsNew.isNotEmpty(e.detail.project.name)) {
+                if (!!e && !!e.detail && !!e.detail.project && !!e.detail.project.name) {
                     this.project = e.detail.project;
-                }
-                for (let i = 0; i < this.project.studies.length; i++) {
-                    if (this.project.studies[i].name === e.detail.study.name || this.project.studies[i].alias === e.detail.study.alias) {
-                        this.study = this.project.studies[i];
-                    }
+                    this.study = this.project.studies.find(study => (study.name === e.detail.study.name || study.alias === e.detail.study.alias));
                 }
 
 //                TODO: Opencga study will be shown later. For now variant browser is shown when the study changes
 //                this.tool = "studyInformation";
-                this.tool = "#browser";
+                this.tool = "#clinical";
                 this.renderHashFragments();
                 this.renderBreadcrumb();
             }
