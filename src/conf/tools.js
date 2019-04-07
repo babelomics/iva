@@ -400,7 +400,7 @@ const tools = {
     clinical: {
         icd10: ICD_10,
         upload: {
-            visible: true,
+            visible: false,
         },
         analysis: {
             visible: true,
@@ -433,7 +433,7 @@ const tools = {
             }
         },
         report: {
-            visible: true,
+            visible: false,
         },
 
 
