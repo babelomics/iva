@@ -20,25 +20,25 @@
 
 const getEnvironmentUrls = environmentName => {
     switch (environmentName) {
-        case 'development':
+        case 'SAS2020':
             return {
                 // cellbase: 'http://cellbase.clinbioinfosspa.es/cb',
                 cellbase: 'http://bioinfo.hpc.cam.ac.uk/cellbase/',
-                opencga: 'http://localhost:8080/opencga-1.3',
+                opencga: 'http://iva-demo.clinbioinfosspa.es:8080/opencga-1.3.8',
                 mmpExtensions: 'http://localhost:3000/api/',
             };
-        case 'development-1.4':
-            return {
-                cellbase: 'http://cellbase.clinbioinfosspa.es/cb',
-                opencga: 'http://localhost:8080/opencga-test',
-                mmpExtensions: 'http://localhost:3000/api/',
-            };
-        case 'testing':
-            return {
-                cellbase: 'http://cellbase.clinbioinfosspa.es/cb',
-                opencga: 'http://10.233.7.23:8080/opencga-1.3.8',
-                mmpExtensions: 'http://10.233.7.23:1688/api/',
-            };
+        // case 'development-1.4':
+        //     return {
+        //         cellbase: 'http://cellbase.clinbioinfosspa.es/cb',
+        //         opencga: 'http://localhost:8080/opencga-test',
+        //         mmpExtensions: 'http://localhost:3000/api/',
+        //     };
+        // case 'testing':
+        //     return {
+        //         cellbase: 'http://cellbase.clinbioinfosspa.es/cb',
+        //         opencga: 'http://10.233.7.23:8080/opencga-1.3.8',
+        //         mmpExtensions: 'http://10.233.7.23:1688/api/',
+        //     };
         default:
             return {
                 cellbase: 'http://cellbase.clinbioinfosspa.es/cb',
@@ -49,9 +49,7 @@ const getEnvironmentUrls = environmentName => {
 };
 
 // const serverUrls = getEnvironmentUrls('development-1.4');
-const serverUrls = getEnvironmentUrls('development');
-
-
+const serverUrls = getEnvironmentUrls('SAS2020');
 
 const cellbase = {
     hosts: [ serverUrls.cellbase ],
